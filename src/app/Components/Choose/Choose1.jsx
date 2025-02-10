@@ -10,9 +10,9 @@ const Choose1 = () => {
         Content:'At TechXen, we understand that every business is unique, which is why we offer a range of flexible IT solutions designed to address your specific challenges and goals.',
         btnName:'Discover More',
         btnUrl:'/contact',
-        img1:'/assets/img/work/work-img1.png',
-        img2:'/assets/img/work/work-img3.png',
-        img3:'/assets/img/work/work-img2.png',
+        img1:'/assets/img/work/work-img1.webp',
+        img2:'/assets/img/work/work-img3.webp',
+        img3:'/assets/img/work/work-img2.webp',
       }
 
     return (

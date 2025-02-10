@@ -10,25 +10,34 @@ const Footer1 = () => {
             <div className="single-footer-items footer-logo-area">
               <div className="footer-logo">
                 <a href="">
-                  <Image
-                    src="/assets/img/logo/footer-logo1.png"
-                    alt="img"
-                    width={209}
-                    height={46}
-                  />
+                  <div className="d-flex align-items-center">
+                    <Image
+                      src="/assets/img/logo/globalitcon-logo.jpeg"
+                      alt="globalitcon-logo"
+                      width={40}
+                      height={10}
+                      className="me-2"
+                    />
+                    <span className="fw-bold company-name-text">
+                      GlobalITCon
+                    </span>
+                  </div>
                 </a>
               </div>
               <div className="space20"></div>
               <div className="heading1">
                 <p>
-                  At TechXen IT Solutions, we are dedicated to delivering
-                  innovative technology solutions tailored to meet the unique
-                  needs of businesses like yours.{" "}
+                  GlobalITCon is a trusted and highly accredited organisation
+                  that provides IT consultancy services and technology
+                  solutions.
                 </p>
               </div>
               <ul className="social-icon">
                 <li>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/company/globalitconllc/"
+                  >
                     <i className="bi bi-linkedin"></i>
                   </a>
                 </li>
@@ -43,7 +52,10 @@ const Footer1 = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/global_it_con_llc"
+                  >
                     <i className="bi bi-instagram"></i>
                   </a>
                 </li>
@@ -58,12 +70,7 @@ const Footer1 = () => {
               <ul className="menu-list">
                 <li>
                   <Link href="/service/service-details">
-                    Cloud Computing Solution
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/service/service-details">
-                    Cybersecurity & Compliance
+                    It Consulting & Support
                   </Link>
                 </li>
                 <li>
@@ -73,8 +80,14 @@ const Footer1 = () => {
                 </li>
                 <li>
                   <Link href="/service/service-details">
-                    It Consulting & Support
+                    Mobile Application
                   </Link>
+                </li>
+                <li>
+                  <Link href="/service/service-details">Web Design</Link>
+                </li>
+                <li>
+                  <Link href="/service/service-details">Devops</Link>
                 </li>
               </ul>
             </div>
@@ -86,20 +99,20 @@ const Footer1 = () => {
 
               <ul className="menu-list">
                 <li>
-                  <Link href="/about">About Us </Link>
-                </li>
-                <li>
                   <Link href="/service">Our Services</Link>
-                </li>
-                <li>
-                  <Link href="/blog">Blog & News</Link>
-                </li>
-                <li>
-                  <Link href="/project">Project</Link>
                 </li>
                 <li>
                   <Link href="/contact">Contact Us</Link>
                 </li>
+                <li>
+                  <Link href="/about">About Us </Link>
+                </li>
+                {/* <li>
+                  <Link href="/blog">Blog & News</Link>
+                </li>
+                <li>
+                  <Link href="/project">Project</Link>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -132,7 +145,7 @@ const Footer1 = () => {
                   />
                 </div>
                 <div className="pera">
-                  <a href="tel:0356588547">03 5658 8547</a>
+                  <a href="tel:0356588547">8888535798</a>
                 </div>
               </div>
 
@@ -146,7 +159,7 @@ const Footer1 = () => {
                   />
                 </div>
                 <div className="pera">
-                  <a href="mailto:admin@techxen.org">admin@techxen.org</a>
+                  <a href="mailto:info@GLOBALITCON.com">info@GLOBALITCON.com</a>
                 </div>
               </div>
 
@@ -160,7 +173,9 @@ const Footer1 = () => {
                   />
                 </div>
                 <div className="pera">
-                  <a href="mailto:admin@techxen.org">www.techxen.org</a>
+                  <a href="mailto:info@GLOBALITCON.com">
+                    https://globalitcon.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -175,7 +190,7 @@ const Footer1 = () => {
           <div className="row align-items-center">
             <div className="col-md-5">
               <div className="coppyright">
-                <p>Copyright @2024 TechXen.All Rights Reserved</p>
+                <p>Copyright @{new Date().getFullYear()} GlobalITCon All Rights Reserved</p>
               </div>
             </div>
             <div className="col-md-7">

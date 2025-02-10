@@ -1,8 +1,8 @@
-"use client"
-import { useEffect, useState } from 'react';
-import Nav from './Nav';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+import { useEffect, useState } from "react";
+import Nav from "./Nav";
+import Link from "next/link";
+import Image from "next/image";
 export default function Header1({ variant }) {
   const [mobileToggle, setMobileToggle] = useState(false);
   const [isSticky, setIsSticky] = useState();
@@ -12,19 +12,19 @@ export default function Header1({ variant }) {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       if (currentScrollPos > prevScrollPos) {
-        setIsSticky('cs-gescout_sticky'); // Scrolling down
+        setIsSticky("cs-gescout_sticky"); // Scrolling down
       } else if (currentScrollPos !== 0) {
-        setIsSticky('cs-gescout_show cs-gescout_sticky'); // Scrolling up
+        setIsSticky("cs-gescout_show cs-gescout_sticky"); // Scrolling up
       } else {
         setIsSticky();
       }
       setPrevScrollPos(currentScrollPos); // Update previous scroll position
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll); // Cleanup the event listener
+      window.removeEventListener("scroll", handleScroll); // Cleanup the event listener
     };
   }, [prevScrollPos]);
 
@@ -61,15 +61,22 @@ export default function Header1({ variant }) {
           <div className="container">
             <div className="cs_main_header_in">
               <div className="cs_main_header_left">
-                <Link className="cs_site_branding" href="/">
-                  {/* <Image
-                    src="/assets/img/logo/header-logo1.png"
-                    alt="img"
-                    width={131}
-                    height={28}
-                  /> */}
-                  <h1 className="">GlobalItCon</h1>
-                </Link>
+                <div className="container">
+                  <Link className="cs_site_branding" href="/">
+                    <div className="d-flex align-items-center">
+                      <Image
+                        src="/assets/img/logo/globalitcon-logo.jpeg"
+                        alt="globalitcon-logo"
+                        width={40}
+                        height={10}
+                        className="me-2"
+                      />
+                      <span className="fw-bold company-name-text">
+                        GlobalITCon
+                      </span>
+                    </div>
+                  </Link>
+                </div>
               </div>
 
               <div className="cs_main_header_center1">
@@ -100,7 +107,7 @@ export default function Header1({ variant }) {
                     </div>
                     <div className="headding">
                       <p>Make a Call</p>
-                      <a href="tel:124(555)6565">124 (555) 6565</a>
+                      <a href="tel:8888535798">+91 8888535798</a>
                     </div>
                   </div>
                   <div className="button">

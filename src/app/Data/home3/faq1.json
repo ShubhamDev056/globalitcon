@@ -1,22 +1,22 @@
 [
-  {  
-    "title": "What does TechXen do?",
-    "desc": "Yes, we'd be happy to provide references or case studies of past projects upon request. Our satisfied clients serve as a testament."
+  {
+    "title": "Is there a fee to use your IT Staffing service?",
+    "desc": "Candidates never pay a fee for our services. Clients pay either an hourly rate for contract work, or a direct hire fee, depending upon the position."
   },
   {
-    "title": "How can TechXen help my business?",
-    "desc": "Yes, we'd be happy to provide references or case studies of past projects upon request. Our satisfied clients serve as a testament."
+    "title": "What types of opportunities do you staff?",
+    "desc": "We provide assistance with any type and any level of IT position. We have direct placement, contract to hire and contract only positions ranging from Developers, Network Engineers, Quality Assurance Analysts, Database Administrators, Systems Administrators and Project Managers. We also staff Help Desk, Operations, Technical Writers/Trainers, and Technical Architects. We also work in the Telecommunications, Engineering, and Web Design sectors."
   },
   {
-     "title": "What industries does TechXen serve?",
-    "desc": "Yes, we'd be happy to provide references or case studies of past projects upon request. Our satisfied clients serve as a testament."
-  },
-  {  
-    "title": "How experienced is the team at TechXen?",
-    "desc": "Yes, we'd be happy to provide references or case studies of past projects upon request. Our satisfied clients serve as a testament."
+    "title": "Do you offer benefits to your employees?",
+    "desc": "Yes. We tailor our benefit and compensation packages to meet the needs of the individual. All of our benefits are ala carte, so you are able to create a benefit package that is the right fit for you and your family."
   },
   {
-    "title": "How long does it take to implement a solution from TechXen?",
-    "desc": "Yes, we'd be happy to provide references or case studies of past projects upon request. Our satisfied clients serve as a testament."
-  } 
+    "title": "Will you ask my permission prior to sending my resume to a client?",
+    "desc": "Absolutely! We will never send your resume anywhere without your permission first. Your resume is not simply a piece of paper, it is a representation of your career, and we respect that."
+  },
+  {
+    "title": "Do you have opportunities in other cities?",
+    "desc": "Yes. Most of our clients have offices in multiple locations throughout the US, and we assist them in all of their locations."
+  }
 ]

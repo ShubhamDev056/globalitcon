@@ -64,7 +64,7 @@ const Testimonial4 = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-4">
                         <div className="big-image" data-aos="fade-up" data-aos-duration="900">
-                        <Image src="/assets/img/testimonial/tes7-big-img.png" alt="img" width={416} height={379}   />
+                        <Image src="/assets/img/testimonial/tes7-big-img.webp" alt="img" width={416} height={379}   />
                         </div>
                     </div>
                     <div className="col-lg-8">

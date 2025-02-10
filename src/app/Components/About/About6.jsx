@@ -51,6 +51,7 @@ const About6 = ({image1,image2,image3,experienceNum,experienceTitle,subTitle,tit
                       <div className="progressbar"><div className="proggress2"></div></div>
                       </div>
                     </div>
+                    
                   </div>
 
                   <div className="space30"></div>
