@@ -1,9 +1,8 @@
 "use server";
-import contactFormSchema from "@/app/Components/contactForm/contactFormSchema";
+import contactFormSchema from "@/app/Components/ContactInfo/contactFormSchema";
 import { z } from "zod";
 import { Resend } from "resend";
 const resend = new Resend("re_8HdfNoHb_BYGGgFKE2ZcKDVo2Mr1cxms1");
-
 
 export async function submitContactForm(formData) {
   console.log("form submitted data: " + JSON.stringify(formData));

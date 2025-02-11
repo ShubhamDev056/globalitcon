@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ContactForm from "@/app/Components/contactForm";
+import ContactForm from "@/app/Components/ContactInfo/ContactForm";
 
 const ContactInfo1 = () => {
   return (

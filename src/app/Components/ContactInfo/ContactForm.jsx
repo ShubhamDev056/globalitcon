@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import contactFormSchema from "./contactFormSchema";
 import axios from "axios";
 
-const Index = () => {
+const ContactForm = () => {
   const [serverResponse, setServerResponse] = useState(null);
   const [loading, setLoading] = useState(false);
   const timeoutRef = useRef(null); // Ref to store the timeout ID
@@ -174,4 +174,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default ContactForm;
