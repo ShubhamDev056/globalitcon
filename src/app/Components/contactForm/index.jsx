@@ -1,12 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import contactFormSchema from "./contactFormSchema";
-//import { submitContactForm } from "@/app/action/form";
+import axios from "axios";
 
 const Index = () => {
   const [serverResponse, setServerResponse] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const timeoutRef = useRef(null); // Ref to store the timeout ID
 
   const {
     register,
@@ -19,24 +21,66 @@ const Index = () => {
 
   const onSubmitHandler = async (data) => {
     setServerResponse(null);
+    setLoading(true);
 
-    // Convert data to FormData (required for Server Actions)
-    const formData = new FormData();
-    Object.keys(data).forEach((key) => formData.append(key, data[key]));
+    try {
+      const response = await axios.post("/api/contact", data, {
+        headers: { "Content-Type": "application/json" },
+      });
 
-    // const response = await submitContactForm(formData); // Call server action
+      setServerResponse({
+        type: "success",
+        message:
+          "Your request was successfully sent. Thank you for your interest in GLOBALITCON; you should receive a response within 48 hours!",
+      });
+      reset();
 
-    // if (!response.success) {
-    //   setServerResponse({ error: response.errors });
-    // } else {
-    //   setServerResponse({ success: response.message });
-    // }
-    //reset();
+      // Clear previous timeout if any
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+
+      // Set a new timeout to hide the alert after 5 seconds
+      timeoutRef.current = setTimeout(() => {
+        setServerResponse(null);
+      }, 5000);
+    } catch (error) {
+      setServerResponse({
+        type: "error",
+        message: error.response?.data?.message || "Something went wrong.",
+      });
+
+      // Clear previous timeout if any
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+
+      // Set a new timeout to hide the alert after 5 seconds
+      timeoutRef.current = setTimeout(() => {
+        setServerResponse(null);
+      }, 5000);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="col-lg-6">
       <div className="contact-form-details">
+        {/* Success/Error Alert */}
+        {serverResponse && (
+          <div
+            className={`alert ${
+              serverResponse.type === "success"
+                ? "alert-success"
+                : "alert-danger"
+            }`}
+            role="alert"
+          >
+            {serverResponse.message}
+          </div>
+        )}
+
         <form onSubmit={handleSubmit(onSubmitHandler)}>
           <div className="row">
             <div className="col-lg-6">
@@ -105,11 +149,22 @@ const Index = () => {
             </div>
 
             <div className="col-lg-12">
-              <button className="theme-btn1">
-                Submit{" "}
-                <span>
-                  <i className="bi bi-arrow-right"></i>
-                </span>
+              <button className="theme-btn1" type="submit" disabled={loading}>
+                {loading ? (
+                  <span>
+                    <div
+                      className="spinner-border spinner-border-sm"
+                      role="status"
+                    >
+                      <span className="visually-hidden">Loading...</span>
+                    </div>{" "}
+                    Sending...
+                  </span>
+                ) : (
+                  <span>
+                    Submit <i className="bi bi-arrow-right"></i>
+                  </span>
+                )}
               </button>
             </div>
           </div>
