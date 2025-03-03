@@ -34,34 +34,66 @@ const careerFormSchema = z.object({
     .min(1, { message: "Country is required" })
     .min(3, { message: "Country should be at least 3 characters" }),
 
-  zipcode: z.coerce
-    .number() // Force it to be a number
-    .int() // Make sure it's an integer
-    .gte(6) // Greater than or equal to the smallest 5 digit int
-    .lte(6), // Less than or equal to the largest 5 digit int
+  zipcode: z.string().regex(/^\d{6}$/, "Pincode must be a 6-digit number"),
 
-  // .number({
-  //   required_error: "Zipcode is required",
-  //   invalid_type_error: "Zipcode must be a number",
-  // })
-  // .gte(6)
-  // .lte(6),
-
-  phoneNumber: z
+  state: z
     .string()
-    .min(10, { message: "Phone number must be 10 digits" })
-    .max(10, { message: "Phone number must be 10 digits" })
-    .regex(indianPhoneRegex, "Invalid Indian phone number"), // Indian number validation
+    .min(1, { message: "State is required" })
+    .min(3, { message: "State should be at least 3 characters" }),
 
-  subject: z
+  phoneNumberHome: z
     .string()
-    .min(1, { message: "Subject is required" })
-    .min(5, { message: "Subject must be at least 5 characters" }),
+    .min(10, "Phone number must be at least 10 digits")
+    .regex(/^\d+$/, "Phone number must contain only numbers"), // Indian number validation
 
-  message: z
+  phoneNumberWork: z
     .string()
-    .min(1, { message: "Message is required" })
-    .min(25, { message: "Message must be at least 25 characters" }),
+    .regex(
+      /^[6-9]\d{9}$/,
+      "Phone number must be a 10-digit starting with 6, 7, 8, or 9"
+    ), // Indian number validation
+
+  workAuthorization: z
+    .string()
+    .min(1, { message: "Work Authorization is required" })
+    .min(5, { message: "Work Authorization must be at least 5 characters" }),
+
+  iTExperience: z
+    .string()
+    .min(1, { message: "IT Experience is required" })
+    .min(5, { message: "IT Experience must be at least 5 characters" }),
+
+  primarySkill: z
+    .string()
+    .min(1, { message: "IT Experience is required" })
+    .min(5, { message: "IT Experience must be at least 5 characters" }),
+
+  USExperience: z
+    .string()
+    .min(1, { message: "US Experience is required" })
+    .min(5, { message: "US Experience must be at least 5 characters" }),
+
+  skillSets: z
+    .string()
+    .min(1, { message: "Skill Sets is required" })
+    .min(5, { message: "Skill Sets must be at least 5 characters" }),
+
+  resume: z
+    .instanceof(FileList)
+    .refine((files) => files.length > 0, "Resume is required")
+    .refine(
+      (files) => files[0]?.size <= 2 * 1024 * 1024, // 2MB max file size
+      "File must be smaller than 2MB"
+    )
+    .refine(
+      (files) =>
+        [
+          "application/pdf",
+          "application/msword",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        ].includes(files[0]?.type),
+      "Only PDF or Word documents are allowed"
+    ),
 });
 
 export default careerFormSchema;
