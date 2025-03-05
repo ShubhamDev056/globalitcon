@@ -46,11 +46,11 @@ const Footer1 = () => {
                     <i className="bi bi-twitter"></i>
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#">
                     <i className="bi bi-youtube"></i>
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a
                     target="_blank"
@@ -123,15 +123,21 @@ const Footer1 = () => {
 
               <div className="contact-box">
                 <div className="icon">
-                  <Image
+                  {/* <Image
                     src="/assets/img/icons/footer1-icon1.png"
+                    alt="img"
+                    width={24}
+                    height={24}
+                  /> */}
+                  <Image
+                    src="/assets/img/icons/footer1-icon2.png"
                     alt="img"
                     width={24}
                     height={24}
                   />
                 </div>
                 <div className="pera">
-                  <a href="tel:0500222333">0500 222 333</a>
+                  <a href="tel:+1 302-357-9360">+1 302-357-9360</a>
                 </div>
               </div>
 
@@ -145,7 +151,7 @@ const Footer1 = () => {
                   />
                 </div>
                 <div className="pera">
-                  <a href="tel:0356588547">8888535798</a>
+                  <a href="tel:0356588547">+91 8888535798</a>
                 </div>
               </div>
 
@@ -159,7 +165,7 @@ const Footer1 = () => {
                   />
                 </div>
                 <div className="pera">
-                  <a href="mailto:info@GLOBALITCON.com">info@GLOBALITCON.com</a>
+                  <a href="mailto:info@globalitcon.com">info@globalitcon.com</a>
                 </div>
               </div>
 
@@ -173,7 +179,7 @@ const Footer1 = () => {
                   />
                 </div>
                 <div className="pera">
-                  <a href="mailto:info@GLOBALITCON.com">
+                  <a href="mailto:info@globalitcon.com">
                     https://globalitcon.com
                   </a>
                 </div>
@@ -190,7 +196,10 @@ const Footer1 = () => {
           <div className="row align-items-center">
             <div className="col-md-5">
               <div className="coppyright">
-                <p>Copyright @{new Date().getFullYear()} GlobalITCon All Rights Reserved</p>
+                <p>
+                  Copyright @{new Date().getFullYear()} GlobalITCon All Rights
+                  Reserved
+                </p>
               </div>
             </div>
             <div className="col-md-7">

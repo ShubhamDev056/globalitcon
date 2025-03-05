@@ -192,16 +192,15 @@ const index = () => {
                   </div>
                   <div className="heading">
                     <h5>Send Us a Mail</h5>
-                    <a href="mailto:info@GLOBALITCON.com" className="text">
-                      info@GLOBALITCON.com
+                    <a href="mailto:info@globalitcon.com" className="text">
+                      info@globalitcon.com
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            
-            <CareerForm />
 
+            <CareerForm />
           </div>
         </div>
       </div>

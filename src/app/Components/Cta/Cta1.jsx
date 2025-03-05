@@ -22,7 +22,7 @@ const Cta1 = () => {
 
             <div className="col-lg-5">
               <div className="buttons">
-                <Link className="cta-btn1" href="/service">
+                <Link className="cta-btn1" href="/contact">
                   Request a Consultaion{" "}
                   <span>
                     <svg

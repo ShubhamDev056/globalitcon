@@ -107,7 +107,7 @@ export default function Header1({ variant }) {
                     </div>
                     <div className="headding">
                       <p>Make a Call</p>
-                      <a href="tel:8888535798">+91 8888535798</a>
+                      <a href="tel:+1 302-357-9360">+1 302-357-9360</a>
                     </div>
                   </div>
                   <div className="button">

@@ -56,12 +56,12 @@ const HeroBanner1 = ({bgImg,subTitle,title,content,btnName,btnUrl,image1,image2,
                         <i className="bi bi-arrow-right"></i>
                       </span>
                     </Link>
-                    <span onClick={handelClick} className="play-btn">
+                    {/* <span onClick={handelClick} className="play-btn">
                       <span>
                         <i className="bi bi-play"></i>
                       </span>{" "}
                       Watch Demo Video
-                    </span>
+                    </span> */}
                   </div>
                 </div>
               </div>

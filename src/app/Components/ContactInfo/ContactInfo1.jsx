@@ -49,26 +49,60 @@ const ContactInfo1 = () => {
                   </div>
                   <div className="heading">
                     <h5>Send Us a Mail</h5>
-                    <a href="mailto:info@GLOBALITCON.com" className="text">
-                      info@GLOBALITCON.com
+                    <a href="mailto:info@globalitcon.com" className="text">
+                      info@globalitcon.com
                     </a>
                   </div>
                 </div>
 
-                <div className="contact-box">
-                  <div className="icon">
-                    <Image
-                      src="/assets/img/icons/contact-page-icon3.png"
-                      alt="img"
-                      width={32}
-                      height={32}
-                    />
+                <div className="heading1">
+                  <div className="space16"></div>
+                  <div className="space16"></div>
+                  <h3>Office Locations</h3>
+                </div>
+                <div className="row">
+                  {/* First Column */}
+
+                  {/* Second Column */}
+                  <div className="col-md-6">
+                    <div className="contact-box">
+                      <div className="heading">
+                        <h5>India</h5>
+                        <a href="tel:+91 9039067007" className="text">
+                          D6 1st Floor Ayoudhya Extension, Ayoudhya Bypass Road,
+                          Bhopal MP 462023
+                          <br />
+                          +91 9039067007, +91 8888535798
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div className="heading">
-                    <h5>Office Location</h5>
-                    <a href="tel:(124)555-6565" className="text">
-                      103 Geet Mohini Phase 6<br /> Bhopal, MP (462041)
-                    </a>
+
+                  <div className="col-md-6">
+                    <div className="contact-box">
+                      <div className="heading">
+                        <h5>India</h5>
+                        <a href="tel:+91 9039067007" className="text">
+                          103 Geet Mohini Phase 6, K - Sector Ayoudhya Nagar,
+                          Bhopal MP 462041
+                          <br />
+                          +91 9039067007, +91 8888535798
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="contact-box">
+                      <div className="heading">
+                        <h5>USA</h5>
+                        <a href="tel:+1 302-357-9360" className="text">
+                          1201 N Orange St # 7045, Wilmington, Delaware USA
+                          19801-1186 <br />
+                          +1 302-357-9360
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
