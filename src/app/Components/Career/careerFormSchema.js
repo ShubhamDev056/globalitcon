@@ -79,7 +79,9 @@ const careerFormSchema = z.object({
     .min(5, { message: "Skill Sets must be at least 5 characters" }),
 
   resume: z
-    .instanceof(FileList)
+    .custom((files) => files instanceof FileList, {
+      message: "Invalid file input",
+    })
     .refine((files) => files.length > 0, "Resume is required")
     .refine(
       (files) => files[0]?.size <= 2 * 1024 * 1024, // 2MB max file size

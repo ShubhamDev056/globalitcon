@@ -150,7 +150,7 @@ export async function POST(req) {
     // ✅ Email options with HTML template and resume attachment
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "recipient@example.com", // Change to your recipient email
+      to: "info@globalitcon.com", // Change to your recipient email
       subject: "New Job Application - " + firstName + " " + lastName,
       html: htmlContent, // ✅ Use the HTML email template
       attachments: [
